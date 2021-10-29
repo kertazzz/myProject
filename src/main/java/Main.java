@@ -13,7 +13,7 @@ public class Main {
 
         driver.get("https://google.com");
 
-        WebElement search = driver.findElement(By.xpath("//input[@aria-label='Найти']"));
+        WebElement search = driver.findElement(By.xpath("//input[@name='q']"));
         search.sendKeys("Selenium", Keys.ENTER);
         WebElement results = driver.findElement(By.id("result-stats"));
         System.out.println(results.getAttribute("innerText"));
